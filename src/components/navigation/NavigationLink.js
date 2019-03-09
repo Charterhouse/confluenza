@@ -1,7 +1,7 @@
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
-const NavigationLink = glamorous(Link)(props => ({
+const NavigationLink = styled(Link)(props => ({
   display: 'inline-block',
   position: 'relative',
   left: '1rem',

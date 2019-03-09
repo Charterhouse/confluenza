@@ -1,11 +1,11 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
 import { Collapsable } from '../Collapsable'
 import { ArrowUp, ArrowDown } from './arrows'
 import { ActiveMarker } from './ActiveMarker'
 
-const Wrapper = glamorous.div({
+const Wrapper = styled.div({
   position: 'relative',
   display: 'flex',
   flexFlow: 'row nowrap',
@@ -18,14 +18,14 @@ const Wrapper = glamorous.div({
   }
 })
 
-const Text = glamorous.div(({color = 'black'}) => ({
+const Text = styled.div(({color = 'black'}) => ({
   fontFamily: 'Roboto Mono, monospace',
   fontWeight: '300',
   fontSize: '0.8rem',
   color: `${color}`
 }))
 
-const ArrowPositioner = glamorous.div({
+const ArrowPositioner = styled.div({
   position: 'absolute',
   right: '13px'
 })

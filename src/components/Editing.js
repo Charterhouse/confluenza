@@ -1,7 +1,7 @@
 import React from 'react'
-import glamorous from 'glamorous'
+import styled from '@emotion/styled'
 
-const A = glamorous.a({
+const A = styled.a({
   fontFamily: 'Roboto Mono, monospace',
   fontWeight: '100',
   fontSize: '0.8rem',
@@ -13,7 +13,7 @@ const A = glamorous.a({
   }
 })
 
-const Wrapper = glamorous.div({
+const Wrapper = styled.div({
   display: 'flex',
   flexFlow: 'row nowrap',
   justifyContent: 'flex-start',
