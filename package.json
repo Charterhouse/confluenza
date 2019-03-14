@@ -56,7 +56,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "now-build": "npm run build"
+    "now-build": "yarn build"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
