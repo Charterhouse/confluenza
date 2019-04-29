@@ -9,7 +9,7 @@ fits the needs of your project.
 
     Use the Gatsby CLI to create a new site, specifying the default starter.
 
-    ```sh
+    ```bash
     # create a new Confluenza site
     npx gatsby new my-confluenza https://github.com/charterhouse/confluenza
     ```
@@ -18,7 +18,7 @@ fits the needs of your project.
 
     Navigate into your new site’s directory and start it up.
 
-    ```sh
+    ```bash
     cd my-confluenza/
     yarn develop
     ```
@@ -41,7 +41,7 @@ containing important metadata like `title`, `path` and `tag`.
 
 The frontmatter of a Confluenza file normally looks like this:
 
-```
+```yaml
 ---
 path: /components/user-login
 title: User Login
@@ -139,7 +139,7 @@ another file, as indicated by the value of the `content` field.
 For example, the page you are reading now is the external content for
 file `WorkingWithExternalContent.md` having the following frontmatter:
 
-```
+```yaml
 ---
 path: /developer-documentation/making-confluenza-yours
 title: Making Confluenza Yours
