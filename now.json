@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "confluenza",
+  "scope": "charterhouse",
   "alias": "confluenza",
   "builds": [
     { "src": "package.json", "use": "@now/static-build", "config": {"distDir": "public"} }
