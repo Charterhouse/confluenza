@@ -11,13 +11,17 @@ const NavigationLink = styled(Link)(props => ({
   fontWeight: '300',
   fontSize: '0.8rem',
   textDecoration: 'none',
-  ':hover': {
+  '&:hover': {
     color: 'black',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    '&:before': {
+      visibility: 'visible',
+      transform: 'scaleY(1)'
+    }
   },
-  ':before': {
+  '&:before': {
     backgroundColor: '#F486CA',
-    content: ' ',
+    content: "' '",
     position: 'absolute',
     width: '1px',
     height: '100%',
@@ -27,21 +31,12 @@ const NavigationLink = styled(Link)(props => ({
     transform: 'scaleY(0.3)',
     transition: 'all 0.3s ease-in-out 0s'
   },
-  // '.active:before': {
-  //   visibility: 'visible',
-  //   transform: 'scaleY(1)',
-  //   backgroundColor: '#F486CA'
-  // },
-  '.active': {
+  '&.active': {
     color: 'black',
     fontFamily: 'Roboto Mono, monospace',
     fontWeight: '500',
     fontSize: '0.8rem',
     transition: 'color 0.2s ease-in-out 0s'
-  },
-  ':hover:before': {
-    visibility: 'visible',
-    transform: 'scaleY(1)'
   }
 }))
 
