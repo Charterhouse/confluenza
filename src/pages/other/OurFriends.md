@@ -6,9 +6,9 @@ tag: other
 
 Confluenza is used in the following projects:
 
-- [react-frontend-developer.club]
+- [react-frontend-developer.now.sh]
 - [cogito.mobi]
 
 
-[react-frontend-developer.club]: https://react-frontend-developer.club
+[react-frontend-developer.now.sh]: https://react-frontend-developer.now.sh
 [cogito.mobi]: https://cogito.mobi
