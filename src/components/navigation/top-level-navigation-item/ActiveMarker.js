@@ -6,14 +6,14 @@ const MarkerPositioner = styled.div({
   left: '10px'
 })
 
-const Circle = styled.div(({radius}) => ({
+const Circle = styled.div(({ radius }) => ({
   height: radius,
   width: radius,
   backgroundColor: '#F486CA',
   borderRadius: '50%'
 }))
 
-const ActiveMarker = ({active}) => (
+const ActiveMarker = ({ active }) => (
   <MarkerPositioner>
     <Circle radius='5px' />
   </MarkerPositioner>

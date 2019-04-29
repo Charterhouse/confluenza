@@ -6,7 +6,7 @@ const Wrapper = styled.div({
   padding: '25px'
 })
 
-const Layout = ({location, children}) => {
+const Layout = ({ location, children }) => {
   if (location.pathname === '' || location.pathname === '/') {
     return (
       <Wrapper>{children}</Wrapper>
