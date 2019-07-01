@@ -8,6 +8,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
+    "@reach/router": "^1.2.1",
     "@react-frontend-developer/css-grid-helper": "^1.0.20",
     "gatsby": "^2.9.0",
     "gatsby-plugin-catch-links": "^2.0.15",
@@ -26,6 +27,7 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-media": "^1.9.2",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-moraga": "^0.16.19"
