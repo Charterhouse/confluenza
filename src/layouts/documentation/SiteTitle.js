@@ -8,6 +8,7 @@ const Wrapper = styled.div({
   fontFamily: 'Roboto Mono, monospace',
   fontWeight: '300',
   fontSize: '1.2rem',
+  lineHeight: '1.8rem',
   textAlign: 'center',
   verticalAlign: 'middle',
   padding: '10px',
@@ -17,7 +18,7 @@ const Wrapper = styled.div({
 const HomeLink = styled(Link)({
   color: 'white',
   fontWeight: '300',
-  ':hover': {
+  '&:hover': {
     color: 'white',
     textDecoration: 'none'
   }
