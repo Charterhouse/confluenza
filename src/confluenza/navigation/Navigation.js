@@ -11,9 +11,6 @@ const List = styled.ul({
   margin: 0
 })
 
-const navigationLinkHeight = v => v
-const navigationLinkMargin = v => v
-
 export class Navigation extends React.PureComponent {
   state = {
     otherDeltas: [],
@@ -140,21 +137,31 @@ export class Navigation extends React.PureComponent {
     }
   }
 
-  topLevelNavigationItemChanged = (delta, element) => {
+  getElementHeight = el => {
+    if (typeof window !== 'undefined') {
+      return Number(RegExp(/\d+/).exec(window.getComputedStyle(el).height)[0])
+    }
+    return 0
+  }
+
+  topLevelNavigationItemChanged = (delta, element, triggerElement) => {
+    const navigationElementTotalHeight = this.getElementHeight(triggerElement)
     this.updateScrollPosition({
       top: element.offsetTop,
       addedContentHeight: delta,
-      navigationElementTotalHeight: navigationLinkHeight(41)
+      navigationElementTotalHeight
     })
   }
 
-  midLevelNavigationItemChanged = (group, index, delta, element) => {
+  midLevelNavigationItemChanged = (group, index, delta, element, triggerElement) => {
     this.updateDeltas(group, index, delta)
+
+    const navigationElementTotalHeight = this.getElementHeight(triggerElement)
 
     this.updateScrollPosition({
       top: element.offsetTop,
       addedContentHeight: delta,
-      navigationElementTotalHeight: navigationLinkHeight(27) + navigationLinkMargin(0.8 * 16)
+      navigationElementTotalHeight
     })
   }
 
@@ -163,7 +170,7 @@ export class Navigation extends React.PureComponent {
       key={group.tag}
       tag={group.tag}
       title={group.title}
-      onChange={(delta, el) => this.topLevelNavigationItemChanged(delta, el)}
+      onChange={(delta, el, triggerElement) => this.topLevelNavigationItemChanged(delta, el, triggerElement)}
       active={this.isActive(group.docs)}
       delta={this.aggregateDeltas(this.state[`${group.deltaGroupName}Deltas`])}>
       <div>
@@ -174,8 +181,8 @@ export class Navigation extends React.PureComponent {
                 key={i}
                 location={this.props.location}
                 {...doc}
-                onChange={(delta, el) =>
-                  this.midLevelNavigationItemChanged(group.deltaGroupName, i, delta, el)
+                onChange={(delta, el, triggerElement) =>
+                  this.midLevelNavigationItemChanged(group.deltaGroupName, i, delta, el, triggerElement)
                 } />
             ))
           }
