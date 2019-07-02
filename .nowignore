@@ -1,0 +1,10 @@
+node_modules
+.cache
+public
+.gitignore
+/*.*
+!/gatsby-config.js
+!/gatsby-node.js
+!/*.md
+!/package.json
+!/yarn.lock
