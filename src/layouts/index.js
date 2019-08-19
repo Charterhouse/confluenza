@@ -15,9 +15,10 @@ const Layout = ({ location, children }) => (
         padding: 0,
         boxSizing: 'border-box'
       }
-    }} />
+    }}
+    />
     {(location.pathname === '' || location.pathname === '/')
-      ? <Wrapper>{ children }</Wrapper>
+      ? <Wrapper>{children}</Wrapper>
       : <DocumentationLayout location={location}>{children}</DocumentationLayout>}
   </div>
 )

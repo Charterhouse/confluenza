@@ -7,6 +7,7 @@ class NavigationHeading extends React.Component {
   state = {
     cln: ''
   }
+
   getActiveProps = (currentLocation, href) => {
     this.location = currentLocation.pathname.replace(/\/$/, '')
     this.hash = currentLocation.hash
@@ -42,7 +43,7 @@ class NavigationHeading extends React.Component {
           className={this.state.cln}
           getProps={({ location, href }) => this.getActiveProps(location, href)}
         >
-          { value }
+          {value}
         </NavigationLink>
       </li>
     )
